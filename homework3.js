@@ -22,6 +22,8 @@ console.log(uniquearrayornot(givenarray))
 function elemsbetweenmaxmin(arr) {
     let max;
     let min;
+    let count;
+    let length = arr.length
     for(let i = 0;i < arr.length;i++) {
         if(i === 0) {
             max = arr[i]
@@ -32,11 +34,15 @@ function elemsbetweenmaxmin(arr) {
             max = arr[i]
         }
     }
-    const count = max - min;
+    if(arr.includes(0)) {
+        count = (max - min) - (length - 2);
+    } else {
+        count = ((max - min) + 1) - (length - 2);
+    }
     return count;
 }
 
-const arrayofnumbers = [1,3,24,2,5,0,-2,4]
+const arrayofnumbers = [1,3,24,2,5,-2,4]
 console.log(elemsbetweenmaxmin(arrayofnumbers))
 
 
