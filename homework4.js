@@ -17,6 +17,7 @@ function includes(str1,str2)  {
             } else if(str2index === str2.length) {
                 return true
             } else {
+                j = str2.length - 1
                 str2index = 0;
             }
         }
@@ -46,6 +47,7 @@ function indexOf(str1,str2)  {
                 return j - str2index
             } else {
                 str2index = 0;
+                j = str2.length - 1;
             }
         }
     }
