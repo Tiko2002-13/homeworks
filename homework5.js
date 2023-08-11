@@ -45,28 +45,16 @@ console.log(result2);
 
 //4 array reduce
 
-function myreduce(func,firstval) {
-    let sum = 0;
+function myreduce(func,firstval=0) {
     for(let i = 0;i < this.length;i++) {
-        if(firstval !== undefined && firstval === 0) {
-            sum += func(firstval,this[i])
-        } else if(firstval === undefined){
-            firstval = 0;
-            sum += func(firstval,this[i])
-        } else if(firstval !== 0 && firstval !== undefined) {
-            if(i === 0) {
-                sum += firstval;
-                firstval = 0;
-                sum += func(firstval,this[i])
-            } else {
-                sum += func(firstval,this[i])
-            }
-        }
+        if(firstval !== undefined) {
+          firstval = func(firstval,this[i])
+        } 
     }
-    return sum;
+    return firstval;
 }
 
 array1.myreduce = myreduce;
-const initialValue = 27;
+const initialValue = 0;
 const result3 = array1.myreduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
 console.log(result3)
