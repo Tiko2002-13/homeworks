@@ -31,12 +31,20 @@ function replacer(str,result = "",iterator = 0,checking = "pi",index = 0,current
         return result;
     }
     if(str[iterator] === checking[index]) {
-        index = index + 1;
         current += checking[index];
+        index = index + 1;
     }else if(index === 2) {
         index = 0;
         result += "3.14";
-        result += str[iterator]
+        if(str[iterator] + str[iterator + 1] !== checking) {
+             result += str[iterator];
+        } else {
+            result += "3.14";
+            iterator = iterator + 1;
+        }
+    } else if(str[iterator] === checking[index].toUpperCase()) {
+        current += checking[index];
+        index = index + 1;
     } else if(index !== 0) {
         index = 0;
         result += current;
