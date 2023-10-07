@@ -1,0 +1,22 @@
+.img {
+    height: 50%;
+    width: 50%;
+}
+
+.container {
+    width: 1500px;
+    height: 750px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+body {
+    background-color: blue;
+    display: flex;
+}
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8 {
+    width: 100px;
+    height: 75px;
+    background-color: red;
+    font-size: 30px;
+}
