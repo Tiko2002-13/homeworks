@@ -1,0 +1,46 @@
+#container {
+    background-color: red;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    color: white;
+
+}
+#input {
+    padding: 0px;
+    height: 30px;
+    width: 50%;
+}
+#btn {
+    padding: 0px;
+    height: 30px;
+    width: 15%;
+    background-color: grey;
+   
+}
+#titl {
+    font-size: 20px;
+}
+
+.newbtn {
+    background-color: white;
+    display:block;
+    flex: 90%;
+    height: 50px;
+    text-align: left;
+}
+.newclose {
+    background-color: purple;
+    flex: 10%;
+    height: 50px;
+    text-align: center;
+}
+.newdi {
+    display: flex;
+    
+}
+.txt {
+    text-decoration: line-through;
+}
+
+
